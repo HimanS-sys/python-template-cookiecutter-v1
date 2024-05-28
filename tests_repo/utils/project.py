@@ -6,7 +6,7 @@ from copy import deepcopy
 from pathlib import Path
 from typing import Dict
 
-from tests.consts import PROJECT_DIR
+from tests_repo.consts import PROJECT_DIR
 
 
 def initialize_git_repo(repo_dir: Path):
