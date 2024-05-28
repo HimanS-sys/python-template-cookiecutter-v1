@@ -1,8 +1,8 @@
 """Module containg project directory fixture implementation."""
 
 import shutil
-from pathlib import Path
 import subprocess
+from pathlib import Path
 from uuid import uuid4
 
 import pytest
@@ -26,12 +26,13 @@ def project_dir() -> Path:
                 "make",
                 "lint-ci",
             ],
-            cwd = generated_repo_dir,
-            check = False,
+            cwd=generated_repo_dir,
+            check=False,
         )
         yield generated_repo_dir
     finally:
         shutil.rmtree(path=generated_repo_dir)
+
 
 def generate_test_session_id() -> str:
     """Retun a random session id."""
