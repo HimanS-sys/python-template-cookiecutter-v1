@@ -109,12 +109,12 @@ jobs:
         run: |
           /bin/bash -x run.sh publish:test
         env:
-          TEST_PYPI_TOKEN: {% raw %}${{ secrets.TEST_PYPI_TOKEN }}{% endraw %}
+          TEST_PYPI_TOKEN: "{% raw %}${{ secrets.TEST_PYPI_TOKEN }}{% endraw %}"
       - name: Publish to Prod PyPI
         run: |
           /bin/bash -x run.sh publish:prod
         env:
-          PROD_PYPI_TOKEN: {% raw %}${{ secrets.PROD_PYPI_TOKEN }}{% endraw %}
+          PROD_PYPI_TOKEN: "{% raw %}${{ secrets.PROD_PYPI_TOKEN }}{% endraw %}"
       - name: Push tags
         run: |
           git push origin --tags
