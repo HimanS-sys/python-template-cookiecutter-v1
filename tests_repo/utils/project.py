@@ -50,8 +50,6 @@ def generate_project(template_values: Dict[str, str], test_session_id: str):
         str(cookiecutter_config_fpath),
         "--verbose",
     ]
-    # cmd_joined = " ".join(cmd)
-    # print(f"\n\n\ncmd:\n{cmd_joined}\n\n\n")
     subprocess.run(cmd, check=True)
 
     generated_repo_dir: Path = PROJECT_DIR / "sample" / template_values["repo_name"]

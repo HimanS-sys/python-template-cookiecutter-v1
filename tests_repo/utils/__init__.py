@@ -1,1 +1,1 @@
-"Init file for module."
+"""Init file for module."""
