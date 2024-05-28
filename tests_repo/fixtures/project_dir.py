@@ -14,7 +14,7 @@ from tests_repo.utils.project import (
 
 
 @pytest.fixture(scope="session")
-def project_dir() -> Path: # type: ignore
+def project_dir() -> Path:  # type: ignore
     """Fixture that initializes isolated project and make sure it is removed after tests."""
     test_session_id: str = generate_test_session_id()
     template_values = {"repo_name": f"test-repo-{test_session_id}"}

@@ -41,4 +41,7 @@
             "color": "#90EE90"
         }
     ],
+    "python.analysis.extraPaths": [
+        "./{{cookiecutter.repo_name}}/src"
+    ],
 }

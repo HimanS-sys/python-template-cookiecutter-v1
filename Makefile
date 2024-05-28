@@ -25,5 +25,3 @@ lint-ci:
 
 test:
 	bash run.sh run-tests
-
-

@@ -1,7 +1,10 @@
 """Tests for `example_pkg.states_info`."""
 
 import pytest
-from example_pkg.states_info import is_city_capitol_of_state, slow_add
+from example_pkg.states_info import (
+    is_city_capitol_of_state,
+    slow_add,
+)
 
 
 @pytest.mark.parametrize(
