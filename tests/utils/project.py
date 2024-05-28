@@ -4,6 +4,7 @@ import json
 import subprocess
 from copy import deepcopy
 from pathlib import Path
+from typing import Dict
 
 from tests.consts import PROJECT_DIR
 
