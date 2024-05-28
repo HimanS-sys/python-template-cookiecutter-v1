@@ -1,13 +1,7 @@
 """Tests for `example_pkg.states_info`."""
 
-from pathlib import Path
-
 import pytest
-
-from example_pkg.states_info import (
-    is_city_capitol_of_state,
-    slow_add,
-)
+from example_pkg.states_info import is_city_capitol_of_state, slow_add
 
 
 @pytest.mark.parametrize(
@@ -20,6 +14,7 @@ from example_pkg.states_info import (
     ],
 )
 def test__is_city_capitol_of_state(city_name: str, state: str, is_capitol: bool):
+    """Test that function returns correct answer for city-state pairs."""
     assert is_city_capitol_of_state(city_name=city_name, state=state) == is_capitol
 
 
