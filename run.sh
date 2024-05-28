@@ -48,7 +48,7 @@ function test:quick {
 # (example) ./run.sh test tests/test_states_info.py::test__slow_add
 function run-tests {
     PYTEST_EXIT_STATUS=0
-    python -m pytest ${@:-"$THIS_DIR/tests/"}
+    python -m pytest ${@:-"$THIS_DIR/tests_repo/"}
 }
 
 # function test:wheel-locally {
