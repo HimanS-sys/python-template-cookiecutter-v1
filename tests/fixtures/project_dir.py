@@ -15,6 +15,7 @@ from tests.utils.project import (
 
 @pytest.fixture(scope="session")
 def project_dir() -> Path:
+    """Fixture that initializes isolated project and make sure it is removed after tests."""
     test_session_id: str = generate_test_session_id()
     template_values = {"repo_name": f"test-repo-{test_session_id}"}
     generated_repo_dir = generate_project(template_values=template_values, test_session_id=test_session_id)
@@ -33,5 +34,6 @@ def project_dir() -> Path:
         shutil.rmtree(path=generated_repo_dir)
 
 def generate_test_session_id() -> str:
+    """Retun a random session id."""
     test_session_id = str(uuid4())[:6]
     return test_session_id
