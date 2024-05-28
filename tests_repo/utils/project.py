@@ -37,7 +37,7 @@ def generate_project(template_values: Dict[str, str], test_session_id: str):
     """Generate project for test purpose."""
     template_values: Dict[str, str] = deepcopy(template_values)
     cookiecutter_config = {"default_context": template_values}
-    cookiecutter_config_fpath = PROJECT_DIR / f"tests/cookiecutter-{test_session_id}.json"
+    cookiecutter_config_fpath = PROJECT_DIR / f"tests_repo/cookiecutter-{test_session_id}.json"
     cookiecutter_config_fpath.write_text(json.dumps(cookiecutter_config))
 
     cmd = [
