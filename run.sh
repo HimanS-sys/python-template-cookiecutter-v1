@@ -80,7 +80,7 @@ function try-load-dotenv {
 #   GITHUB_USERNAME - name of my github user
 #   IS_PUBLIC_REPO - if true, the repository will be public, otherwise private
 function create-repo-if-not-exist {
-    local IS_PUBLIC_REPO=${IS_PUBLIC_REPO:-false}
+    local IS_PUBLIC_REPO=${IS_PUBLIC_REPO:-true}
     # check if the repository already exists, if it does, return
     echo "Checking to see if $GITHUB_USERNAME/$REPO_NAME exists..."
     if gh repo view "$GITHUB_USERNAME/$REPO_NAME" > /dev/null 2>&1; then
