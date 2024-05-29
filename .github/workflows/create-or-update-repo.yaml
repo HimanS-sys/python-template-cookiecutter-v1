@@ -65,4 +65,6 @@ jobs:
               GITHUB_USERNAME: Himans-Sys
               PACKAGE_IMPORT_NAME: ${{ github.event.inputs.package_import_name }}
             run: |
+              git config --global user.email "kandpallucky@gmail.com"
+              git config --global user.name "Himanshu Kandpal"
               bash run.sh open-pr-with-generated-project

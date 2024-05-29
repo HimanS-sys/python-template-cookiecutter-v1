@@ -210,6 +210,7 @@ EOF
 function create-sample-repo {
     git add .github/
     git commit -m "fix: debugging the create-or-update-repo.yaml"
+    git remote set-url origin https://${GH_TOKEN}@github.com/${GITHUB_USERNAME}/${REPO_NAME}.git
     git push origin main
 
     gh repo set-default "$GITHUB_USERNAME/$REPO_NAME"
