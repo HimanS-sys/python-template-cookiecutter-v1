@@ -13,7 +13,7 @@ on:
               default: false
               type: boolean
             package_import_name:
-              description: Used in imports, e.g. `from <name> import ...`
+              description: Used in imports, e.g. `from <name> import ....`
               required: true
               type: string
 env:
@@ -33,7 +33,6 @@ jobs:
               GH_TOKEN: ${{ secrets.PERSONAL_GH_TOKEN }}
             run: |
               gh auth status
-              gh auth refresh -h github.com -t $GH_TOKEN
               bash run.sh create-repo-if-not-exist
 
     configure-repo:
