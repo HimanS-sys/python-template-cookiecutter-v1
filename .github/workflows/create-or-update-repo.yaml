@@ -32,8 +32,8 @@ jobs:
               IS_PUBLIC_REPO: ${{ github.event.inputs.is_public_repo }}
               GH_TOKEN: ${{ secrets.PERSONAL_GH_PAT }}
             run: |
-              git config --global user.email "github-actions[bot]@users.noreply.github.com"
-              git config --global user.name "Himans-Sys"
+              git config --global user.email "kandpallucky@gmail.com"
+              git config --global user.name "Himanshu Kandpal"
               gh auth status
               bash run.sh create-repo-if-not-exist
 
