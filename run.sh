@@ -112,8 +112,7 @@ function push-initial-readme-to-repo {
     git add --all
     git commit -m "feat: created repositry"
     echo "repo_name: ${REPO_NAME}"
-    echo "repository: ${{ github.repository }}"
-    git remote set-url origin https://${GH_TOKEN}@github.com/${REPO_NAME}.git
+    git remote set-url origin https://${GH_TOKEN}@github.com/${GITHUB_USERNAME}/${REPO_NAME}.git
     git push origin main
 }
 
