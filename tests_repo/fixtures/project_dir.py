@@ -19,7 +19,7 @@ def project_dir() -> Path:  # type: ignore
     test_session_id: str = generate_test_session_id()
     template_values = {
         "repo_name": f"test-repo-{test_session_id}",
-        "package_import_name": f"test_package_{test_session_id}"
+        "package_import_name": f"test_package_{test_session_id}",
     }
     generated_repo_dir = generate_project(template_values=template_values, test_session_id=test_session_id)
     try:
