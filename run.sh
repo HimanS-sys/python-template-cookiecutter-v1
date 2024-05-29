@@ -170,7 +170,7 @@ EOF
         --no-input \
         --config-file "$CONFIG_FILE_PATH"
     rm $CONFIG_FILE_PATH
-    
+
     # stage the generated files on a new feature branch
     mv "$REPO_NAME/.git" "$OUTDIR/$REPO_NAME/"
     cd "$OUTDIR/$REPO_NAME"
@@ -186,7 +186,7 @@ EOF
 
     # restage the files modified by pre-commit
     git add --all
-    
+
     # commit the changes and push them to remote feature branch
     git commit -m "feat: populated from python-template-cookiecutter-v1"
     git push origin "$UNIQUE_BRANCH_NAME"

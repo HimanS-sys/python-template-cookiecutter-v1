@@ -18,7 +18,7 @@ on:
               type: string
 env:
   GITHUB_TOKEN: ${{ secrets.PERSONAL_GH_TOKEN }}
-              
+
 jobs:
     create-repo-if-not-exists:
         runs-on: ubuntu-latest
@@ -32,7 +32,7 @@ jobs:
               IS_PUBLIC_REPO: ${{ github.event.inputs.is_public_repo }}
             run: |
               bash run.sh create-repo-if-not-exists
-    
+
     configure-repo:
         needs: [create-repo-if-not-exists]
         runs-on: ubuntu-latest
@@ -63,4 +63,3 @@ jobs:
               PACKAGE_IMPORT_NAME: ${{ github.event.inputs.package_import_name }}
             run: |
               bash run.sh open-pr-with-generated-project
-  
