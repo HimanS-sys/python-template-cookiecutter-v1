@@ -30,7 +30,10 @@ jobs:
               REPO_NAME: ${{ github.event.inputs.repo_name }}
               GITHUB_USERNAME: Himans-Sys
               IS_PUBLIC_REPO: ${{ github.event.inputs.is_public_repo }}
+              GH_TOKEN: ${{ secrets.PERSONAL_GH_TOKEN }}
             run: |
+              gh auth status
+              gh auth refresh -h github.com -t $GH_TOKEN
               bash run.sh create-repo-if-not-exist
 
     configure-repo:
