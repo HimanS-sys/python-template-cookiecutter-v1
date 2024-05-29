@@ -90,13 +90,13 @@ function create-repo-if-not-exist {
 
     echo "Repository does not exist, creating..."
     # otherwise create the repository
-    if [[ "$IS_PUBLIC_REPO" == "false" ]]; then
-        PUBLIC_OR_PRIVATE="private"
-    else
-        PUBLIC_OR_PRIVATE="public"
-    fi
+    # if [[ "$IS_PUBLIC_REPO" == "false" ]]; then
+    #     PUBLIC_OR_PRIVATE="private"
+    # else
+    #     PUBLIC_OR_PRIVATE="public"
+    # fi
     echo "creating repository..."
-    gh repo create "$GITHUB_USERNAME/$REPO_NAME" --"$PUBLIC_OR_PRIVATE"
+    gh repo create "$GITHUB_USERNAME/$REPO_NAME" --"public"
 
     push-initial-readme-to-repo
 }
