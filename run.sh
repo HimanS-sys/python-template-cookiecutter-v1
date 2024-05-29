@@ -179,7 +179,7 @@ EOF
     mv "$REPO_NAME/.git" "$OUTDIR/$REPO_NAME/"
     cd "$OUTDIR/$REPO_NAME"
 
-    UUID=$(cat /prod/sys/kernal/random/uuid)
+    UUID=$(cat /proc/sys/kernal/random/uuid)
     UNIQUE_BRANCH_NAME=feat/populating-from-template-${UUID:0:6}
 
     git checkout -b "$UNIQUE_BRANCH_NAME"
